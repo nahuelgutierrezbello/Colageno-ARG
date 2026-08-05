@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Colágeno ARG | Piel, Cabello, Uñas y Articulaciones</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#fafafa;
+color:#333;
+}
+
+header{
+background:linear-gradient(90deg,#5f3dc4,#e64980);
+padding:15px 30px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+color:white;
+font-weight:600;
+}
+
+header img{
+height:45px;
+max-height:50px;
+}
+
+.banner-section{
+width:100%;
+}
+
+.banner-section img{
+width:100%;
+height:auto;
+display:block;
+}
+
+.hero{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:60px 10%;
+gap:35px;
+background:linear-gradient(180deg, #fff 0%, #f8f5ff 100%);
+border-radius:30px;
+box-shadow:0 30px 80px rgba(95,61,196,0.12);
+margin:20px 10%;
+}
+
+.hero img{
+
+width:100%;
+max-width:none;
+border-radius:30px;
+}
+
+.hero-text .hero-logo{
+width:140px;
+max-width:100%;
+margin-bottom:20px;
+}
+
+.hero-text{
+
+max-width:700px;
+text-align:center;
+}
+
+.hero h1{
+
+font-size:48px;
+line-height:1.05;
+margin-bottom:20px;
+}
+
+.hero-description{
+font-size:20px;
+line-height:1.8;
+color:#4a4a4a;
+margin-bottom:28px;
+}
+
+.hero-benefits{
+display:grid;
+grid-template-columns:repeat(3, minmax(160px, 1fr));
+gap:18px;
+margin:30px 0;
+}
+
+.hero-benefit{
+background:white;
+padding:18px 20px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+text-align:left;
+}
+
+.hero-benefit h4{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.hero-benefit p{
+font-size:15px;
+color:#666;
+line-height:1.6;
+}
+
+.hero-cta{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.hero-cta .btn{
+padding:18px 42px;
+}
+
+.hero-cta small{
+color:#666;
+}
+
+.btn{
+background:#ff3b85;
+color:white;
+padding:18px 42px;
+text-decoration:none;
+border-radius:999px;
+font-size:18px;
+font-weight:700;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+letter-spacing:.01em;
+box-shadow:0 18px 35px rgba(255,59,133,0.22);
+transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.btn:hover{
+transform:translateY(-2px) scale(1.02);
+box-shadow:0 22px 40px rgba(255,59,133,0.28);
+background:#ff1f74;
+}
+
+.insta-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+background:rgba(255,255,255,0.18);
+color:white;
+padding:10px 18px;
+border-radius:999px;
+text-decoration:none;
+font-size:16px;
+font-weight:700;
+border:1px solid rgba(255,255,255,0.22);
+transition:transform .25s ease, background .25s ease, border .25s ease;
+}
+
+.insta-btn:hover{
+transform:translateY(-2px);
+background:rgba(255,255,255,0.32);
+}
+
+.buy{
+display:block;
+background:#5f3dc4;
+padding:18px 30px;
+color:white;
+text-align:center;
+margin-top:25px;
+text-decoration:none;
+border-radius:999px;
+font-weight:700;
+letter-spacing:.01em;
+box-shadow:0 16px 30px rgba(95,61,196,0.20);
+transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.buy:hover{
+transform:translateY(-2px);
+box-shadow:0 20px 35px rgba(95,61,196,0.26);
+background:#4a31b4;
+}
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:50px 10%;
+background:#f4f4f4;
+
+}
+
+.payments{
+padding:50px 10%;
+text-align:center;
+background:#fff;
+}
+
+.payments h2{
+font-size:34px;
+margin-bottom:25px;
+}
+
+.payment-logos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:24px;
+}
+
+.payment-logos img{
+height:48px;
+width:auto;
+filter:grayscale(0.05);
+opacity:.9;
+transition:transform .25s ease, opacity .25s ease;
+}
+
+.payment-logos img:hover{
+transform:translateY(-4px);
+opacity:1;
+}
+
+@media(max-width:700px){
+.payment-logos{
+justify-content:center;
+gap:16px;
+}
+.payment-logos img{
+height:38px;
+}
+}
+
+.box{
+
+background:white;
+padding:30px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.box h3{
+
+margin:15px 0;
+
+}
+
+.products{
+
+padding:80px 10%;
+
+}
+
+.products h2{
+
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+
+}
+
+.cards{
+
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+.card{
+
+background:white;
+width:340px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.card img{
+
+width:100%;
+
+}
+
+.card-content{
+
+padding:25px;
+
+}
+
+.card h3{
+
+font-size:28px;
+margin-bottom:15px;
+
+}
+
+.card ul{
+
+margin:20px 0;
+padding-left:20px;
+
+}
+
+.price{
+
+font-size:42px;
+color:#ff0066;
+font-weight:bold;
+
+}
+
+.old{
+
+text-decoration:line-through;
+color:gray;
+font-size:22px;
+
+}
+
+.buy{
+
+display:block;
+background:#5f3dc4;
+padding:18px;
+color:white;
+text-align:center;
+margin-top:25px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+.combo{
+
+background:linear-gradient(90deg,#5f3dc4,#e64980);
+color:white;
+padding:80px 10%;
+text-align:center;
+
+}
+
+.combo h2{
+
+font-size:50px;
+
+}
+
+.combo h3{
+
+font-size:70px;
+margin:20px 0;
+
+}
+
+.combo p{
+
+font-size:22px;
+margin-bottom:25px;
+
+}
+
+.reviews{
+
+padding:80px 10%;
+background:white;
+
+}
+
+.review{
+
+background:#fafafa;
+padding:25px;
+margin:20px auto;
+max-width:900px;
+border-left:5px solid #ff0066;
+
+}
+
+.policies{
+background:#f7f7f7;
+padding:60px 10%;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.policy-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.policy-card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.policy-card p{
+color:#555;
+line-height:1.7;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-bottom:20px;
+}
+
+.footer-links a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+}
+
+.footer-links a:hover{
+color:#ff0066;
+}
+
+.cta{
+
+padding:80px;
+background:#222;
+color:white;
+text-align:center;
+
+}
+
+.cta h2{
+
+font-size:50px;
+margin-bottom:20px;
+
+}
+
+footer{
+
+background:#111;
+color:#999;
+text-align:center;
+padding:30px;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+header{
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:18px 20px;
+}
+
+header img{
+height:40px;
+}
+
+.insta-btn{
+width:100%;
+max-width:420px;
+}
+
+.features{
+grid-template-columns:1fr;
+
+}
+
+.hero{
+padding:40px 18px;
+margin:20px 5%;
+}
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero-benefits{
+grid-template-columns:1fr;
+}
+
+.hero-cta .btn,
+.buy,
+#productos .btn{
+width:100%;
+max-width:420px;
+}
+
+.combo h3{
+
+font-size:48px;
+
+}
+
+.combo,
+.policies{
+padding:50px 8%;
+}
+
+footer{
+padding:25px 10px;
+}
+
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+transition:transform .2s ease;
+z-index:9999;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.05);
+}
+
+.whatsapp-float img{
+width:32px;
+height:32px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="Colágeno ARG logo">
+<div>🚚 Envíos por OCA a Todo Argentina | Compra Segura | Productos Originales</div>
+<a href="https://instagram.com/colagenoarg" class="insta-btn" target="_blank" rel="noopener noreferrer">@colagenoarg</a>
+</header>
+
+<section class="banner-section">
+<img src="banner.png" alt="Banner Colágeno ARG">
+</section>
+
+<section class="hero">
+<div class="hero-text">
+<img class="hero-logo" src="logo.png" alt="Logo Colágeno ARG">
+<h1>El Colágeno que tu cuerpo necesita para verse y sentirse mejor.</h1>
+
+<p class="hero-description">
+Descubrí las fórmulas más completas para impulsar tu piel, cabello, uñas y articulaciones. Resultados visibles con uso diario, envío rápido y soporte por WhatsApp.
+</p>
+
+<div class="hero-benefits">
+<div class="hero-benefit">
+<h4>Resultados reales</h4>
+<p>Mejoras en piel, articulaciones y uñas en pocas semanas.</p>
+</div>
+<div class="hero-benefit">
+<h4>Fórmulas premium</h4>
+<p>Ingredientes de calidad y libre de gluten.</p>
+</div>
+<div class="hero-benefit">
+<h4>Compra segura</h4>
+<p>Atención personalizada por WhatsApp y envío rápido.</p>
+</div>
+</div>
+
+<div class="hero-cta">
+<a href="https://wa.me/5491168342700" class="btn" target="_blank" rel="noopener noreferrer">Comprar Ahora por WhatsApp</a>
+<small>Resolvemos tu pedido en minutos</small>
+</div>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="box">
+
+<h3>🚚</h3>
+
+<p>Envíos a Todo el País</p>
+
+</div>
+
+<div class="box">
+
+<h3>🔒</h3>
+
+<p>Compra 100% Segura</p>
+
+</div>
+
+<div class="box">
+
+<h3>⭐</h3>
+
+<p>Productos Originales</p>
+
+</div>
+
+<div class="box">
+
+<h3>💳</h3>
+
+<p>Hasta 6 cuotas</p>
+
+</div>
+
+</section>
+
+<section id="productos" class="products">
+
+<h2>Elegí el indicado para vos</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="hidrolizado.jpg">
+
+<div class="card-content">
+
+<h3>Colágeno Hidrolizado</h3>
+
+<ul>
+
+<li>✔ Articulaciones</li>
+
+<li>✔ Piel</li>
+
+<li>✔ Cabello</li>
+
+<li>✔ Uñas</li>
+
+</ul>
+
+<div class="old">$27.900</div>
+
+<div class="price">$21.990</div>
+
+<a class="buy" href="https://wa.me/5491168342700" target="_blank" rel="noopener noreferrer">Comprar</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="hialuronico.jpg">
+
+<div class="card-content">
+
+<h3>Colágeno + Hialurónico</h3>
+
+<ul>
+
+<li>✔ Piel luminosa</li>
+
+<li>✔ Hidratación</li>
+
+<li>✔ Elasticidad</li>
+
+<li>✔ Ácido Hialurónico</li>
+
+</ul>
+
+<div class="old">$30.900</div>
+
+<div class="price">$22.990</div>
+
+<a class="buy" href="https://wa.me/5491168342700" target="_blank" rel="noopener noreferrer">Comprar</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="calcio.jpg">
+
+<div class="card-content">
+
+<h3>Colágeno + Calcio</h3>
+
+<ul>
+
+<li>✔ Cabello</li>
+
+<li>✔ Uñas</li>
+
+<li>✔ Huesos</li>
+
+<li>✔ Vitaminas</li>
+
+</ul>
+
+<div class="old">$25.900</div>
+
+<div class="price">$19.990</div>
+
+<a class="buy" href="https://wa.me/5491168342700" target="_blank" rel="noopener noreferrer">Comprar</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="payments">
+<h2>Medios de Pago</h2>
+<p>Aceptamos todos los medios de pago: tarjetas, débito, credito, transferencias.</p>
+<div class="payment-logos">
+<img src="https://cdn.simpleicons.org/visa/1a1f71" alt="Visa">
+<img src="https://cdn.simpleicons.org/mastercard/eb001b" alt="Mastercard">
+<img src="https://cdn.simpleicons.org/americanexpress/2e77bc" alt="American Express">
+<img src="https://cdn.simpleicons.org/mercadopago/003399" alt="Mercado Pago">
+
+</section>
+
+<section class="combo">
+
+<h2>🔥 Oferta Especial</h2>
+
+<h3>Pack x3</h3>
+
+<p>
+
+Llevate los tres productos con envío gratis.
+
+</p>
+
+<h3>$66.900</h3>
+
+<a class="btn" href="https://wa.me/5491168342700" target="_blank" rel="noopener noreferrer">QUIERO EL COMBO</a>
+
+</section>
+
+<section class="cta">
+
+<h2>
+
+Empezá hoy a cuidar tu cuerpo
+
+</h2>
+
+<p style="margin-bottom:30px;">
+
+Elegí tu fórmula y recibila en la puerta de tu casa.
+
+</p>
+
+<a href="https://wa.me/5491168342700" class="btn" target="_blank" rel="noopener noreferrer">
+
+COMPRAR AHORA
+
+</a>
+
+</section>
+
+<section class="policies">
+<div class="policy-card">
+<h3 id="politicas">Política de Privacidad</h3>
+<p>Protegemos tus datos personales y los utilizamos únicamente para gestionar pedidos y responder consultas. Tu información no se comparte con terceros sin tu consentimiento.</p>
+</div>
+<div class="policy-card">
+<h3 id="condiciones">Términos y Condiciones</h3>
+<p>Al comprar aceptás nuestras condiciones de venta y plazos de entrega. No realizamos devoluciones, así que elegí con cuidado antes de completar tu pedido.</p>
+</div>
+</section>
+
+<footer>
+<div class="footer-links">
+<a href="#politicas">Políticas</a>
+<a href="#condiciones">Condiciones</a>
+</div>
+
+© 2026 Colágeno ARG • Buenos Aires, Argentina
+
+</footer>
+
+<a href="https://wa.me/5491168342700" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>
